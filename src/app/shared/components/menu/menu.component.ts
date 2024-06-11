@@ -14,10 +14,12 @@ export class MenuComponent implements OnInit {
       {
         label: 'Home',
         icon: 'pi pi-home',
+        routerLink: ' ',
       },
       {
         label: 'Features',
         icon: 'pi pi-star',
+        routerLink: 'numbers',
       },
       {
         label: 'Projects',

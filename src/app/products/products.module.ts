@@ -5,17 +5,14 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { BasicsPageComponent } from './pages/basics-page/basics-page.component';
 import { NumbersPageComponent } from './pages/numbers-page/numbers-page.component';
 import { CommonPageComponent } from './pages/common-page/common-page.component';
-
+import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 @NgModule({
   declarations: [
     BasicsPageComponent,
     NumbersPageComponent,
-    CommonPageComponent
+    CommonPageComponent,
   ],
-  imports: [
-    CommonModule,
-    ProductsRoutingModule
-  ]
+  imports: [CommonModule, ProductsRoutingModule, PrimeNgModule],
 })
-export class ProductsModule { }
+export class ProductsModule {}
