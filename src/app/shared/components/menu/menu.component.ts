@@ -31,8 +31,9 @@ export class MenuComponent implements OnInit {
             routerLink: 'common',
           },
           {
-            label: 'Blocks',
+            label: 'Custom Pipes',
             icon: 'pi pi-server',
+            routerLink: 'custom',
           },
           {
             label: 'UI Kit',
