@@ -1,1 +1,60 @@
-<p>common-page works!</p>
+<p-panel header="Pipes no tan comunes">
+  <p>Pipes incluídos en Angular - Usualmente en el Common Module</p>
+</p-panel>
+
+<section class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-2">
+  <article class="w-full">
+    <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+      <p class="p-4">
+        Saludos {{ name }}, es un placer
+        {{ gender | i18nSelect : invitationMap }} a nuestro evento.
+      </p>
+      <button
+        (click)="changeClient()"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      >
+        Cmabiar persona
+      </button>
+    </p-fieldset>
+  </article>
+
+  <article class="w-full">
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      <p class="p-4">
+        Actualmente tenemos
+        {{ clients.length | i18nPlural : clientsMaps }}
+      </p>
+      <button
+        (click)="deleteClient()"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      >
+        Borrar Cliente
+      </button>
+    </p-fieldset>
+  </article>
+
+  <article class="w-full">
+    <p-fieldset legend="Slice Pipe" [toggleable]="true">
+      <b>Original</b>
+      <pre>
+      {{ clients }}
+      </pre>
+      <b>Slice</b>
+      <pre>
+      {{ clients | slice : 0 - 2 }}
+      </pre>
+    </p-fieldset>
+  </article>
+
+  <article class="w-full">
+    <p-fieldset legend="JSON Pipe" [toggleable]="true"> </p-fieldset>
+  </article>
+
+  <article class="w-full">
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true"> </p-fieldset>
+  </article>
+
+  <article class="w-full">
+    <p-fieldset legend="Async Pipe" [toggleable]="true"> </p-fieldset>
+  </article>
+</section>

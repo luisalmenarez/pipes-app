@@ -17,17 +17,18 @@ export class MenuComponent implements OnInit {
         routerLink: ' ',
       },
       {
-        label: 'Features',
+        label: 'Numbers',
         icon: 'pi pi-star',
         routerLink: 'numbers',
       },
       {
-        label: 'Projects',
+        label: 'Otros',
         icon: 'pi pi-search',
         items: [
           {
-            label: 'Components',
+            label: 'Pipes',
             icon: 'pi pi-bolt',
+            routerLink: 'common',
           },
           {
             label: 'Blocks',
