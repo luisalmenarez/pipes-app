@@ -47,14 +47,28 @@
   </article>
 
   <article class="w-full">
-    <p-fieldset legend="JSON Pipe" [toggleable]="true"> </p-fieldset>
+    <p-fieldset legend="JSON Pipe" [toggleable]="true">
+      <pre>
+      {{ Person | json }}
+      </pre>
+    </p-fieldset>
   </article>
 
   <article class="w-full">
-    <p-fieldset legend="KeyValue Pipe" [toggleable]="true"> </p-fieldset>
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+      <ul>
+        <li *ngFor="let item of Person | keyvalue">
+          <b> {{ item.key | titlecase }}: </b> {{ item.value }}
+        </li>
+      </ul>
+    </p-fieldset>
   </article>
 
   <article class="w-full">
-    <p-fieldset legend="Async Pipe" [toggleable]="true"> </p-fieldset>
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <pre>
+        {{ myObservableTimer | async }}
+      </pre>
+    </p-fieldset>
   </article>
 </section>
